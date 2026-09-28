@@ -149,32 +149,47 @@ export default function Home() {
                 </Link>
               </div>
 
-              <div className={`grid gap-4 sm:gap-6 ${
+              {/* UNIFORM PRODUCT GRID */}
+              <div className={`grid gap-6 ${
                 isLead
                   ? "grid-cols-1 sm:grid-cols-2 md:grid-cols-3"
-                  : "grid-cols-1 sm:grid-cols-2 md:grid-cols-2"
+                  : "grid-cols-1 sm:grid-cols-2"
               }`}>
                 {items.slice(0, isLead ? 3 : 2).map((p, i) => (
                   <Link
                     key={p.id}
                     to={`/products/${p.slug}`}
-                    className="group relative overflow-hidden bg-white border border-[#D5D0C5] hover:shadow-[0_12px_40px_rgba(26,54,38,0.10)] transition-all fade-up"
+                    className="group flex flex-col h-full bg-white border border-[#D5D0C5] hover:border-[#1A3626]/40 transition-all duration-300 ease-out hover:-translate-y-1.5 hover:shadow-[0_16px_36px_rgba(26,54,38,0.10)] overflow-hidden"
                     style={{ animationDelay: `${i * 80}ms` }}
                     data-testid={`product-tile-${p.slug}`}
                   >
-                    <div className={`overflow-hidden ${isLead && i === 0 ? "h-64 sm:h-80 md:h-96" : "h-56 sm:h-64 md:h-72"}`}>
+                    {/* Consistent stage frame: uniform height, gentle gradient, padding, and centered object-contain */}
+                    <div className="h-64 sm:h-72 md:h-80 w-full p-6 bg-gradient-to-b from-[#FBF9F5] to-white flex items-center justify-center overflow-hidden border-b border-[#D5D0C5]/40">
                       <img
                         src={p.image_url}
                         alt={p.name}
                         loading="lazy"
-                        className="w-full h-full object-cover group-hover:scale-[1.04] transition-transform duration-[1000ms] ease-out"
+                        className="max-h-full max-w-full w-auto h-auto object-contain drop-shadow-[0_8px_16px_rgba(0,0,0,0.06)] group-hover:scale-105 transition-transform duration-700 ease-out"
                       />
                     </div>
-                    <div className="p-5 sm:p-6">
-                      <h3 className="font-serif-display text-lg sm:text-xl md:text-2xl text-[#1A3626] leading-tight">
-                        {p.name}
-                      </h3>
-                      <p className="text-xs sm:text-sm text-[#4A524C] mt-1.5 line-clamp-2">{p.short_description}</p>
+
+                    {/* Uniform content: pinned bottom link and aligned text baselines */}
+                    <div className="p-5 sm:p-6 flex flex-col flex-1 justify-between bg-white">
+                      <div>
+                        <h3 className="font-serif-display text-lg sm:text-xl md:text-2xl text-[#1A3626] leading-snug line-clamp-1">
+                          {p.name}
+                        </h3>
+                        <p className="text-xs sm:text-sm text-[#4A524C] mt-2 line-clamp-2 leading-relaxed">
+                          {p.short_description}
+                        </p>
+                      </div>
+
+                      <div className="pt-5 mt-auto">
+                        <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#1A3626] group-hover:text-[#C98E4B] transition-colors">
+                          Details & Specs{" "}
+                          <ArrowUpRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                        </span>
+                      </div>
                     </div>
                   </Link>
                 ))}
