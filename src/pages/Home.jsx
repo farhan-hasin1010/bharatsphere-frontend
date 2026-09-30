@@ -29,7 +29,7 @@ const CREDENTIALS = [
 ];
 
 const MARQUEE = [
-  "Reach Certified",
+  "REACH Certified",
   "India → Global Markets",
   "IEC Registered",
   "GST · LUT Compliant",

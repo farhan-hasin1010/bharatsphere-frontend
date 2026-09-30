@@ -33,7 +33,7 @@ export default function Products() {
         <div className="eyebrow mb-4">The Range</div>
         <h1 className="font-serif-display text-4xl sm:text-5xl md:text-6xl text-[#1A3626] leading-[1.02]">
           Three specialised lines,<br />
-          <span className="italic">built for European buyers.</span>
+          <span className="italic">built for " Global buyers. "</span>
         </h1>
         <p className="text-[#4A524C] mt-5 max-w-xl text-sm sm:text-base">
           Every item is manufactured and finished in Bengal's jute belt and shipped direct from India.
