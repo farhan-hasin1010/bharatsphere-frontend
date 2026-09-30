@@ -33,7 +33,7 @@ export default function Layout({ children }) {
         <div className="px-4 sm:px-6 md:px-12 lg:px-20 h-16 md:h-20 flex items-center justify-between gap-2">
           <Link to="/" className="flex items-center gap-2 sm:gap-3 min-w-0" data-testid="logo-link">
             <img
-              src="/logo.jpeg"
+              src="/logo.png"
               alt="BharatSphere Exim Logo"
               className="w-9 h-9 sm:w-11 sm:h-11 object-contain rounded shrink-0"
             />
@@ -114,7 +114,7 @@ export default function Layout({ children }) {
           <div className="md:col-span-5 space-y-4">
             <div className="font-serif-display text-2xl md:text-3xl tracking-tight">{CONTACT.company}</div>
             <p className="text-[#F4F1EA]/70 text-sm leading-relaxed max-w-md">
-              Custom-Printed & Value-Added Jute Bags — Direct from India to Europe. Trading exporter based in
+              Custom-Printed & Value-Added Jute Bags — Direct from India to Global Markets. Trading exporter based in
               Bengal's jute heartland.
             </p>
             <div className="pt-2 space-y-2 text-sm">

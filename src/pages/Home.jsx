@@ -29,14 +29,10 @@ const CREDENTIALS = [
 ];
 
 const MARQUEE = [
-  "India → Europe",
+  "Reach Certified",
+  "India → Global Markets",
   "IEC Registered",
-  "JPDEPC RCMC",
   "GST · LUT Compliant",
-  "OEKO-TEX in Progress",
-  "Custom Printing",
-  "Wine Carrier Specialists",
-  "Direct Exporter",
 ];
 
 export default function Home() {
@@ -62,9 +58,7 @@ export default function Home() {
               Value-Added <span className="italic">Jute Bags.</span>
             </h1>
             <p className="text-base md:text-xl text-[#4A524C] max-w-2xl leading-relaxed">
-              Direct from India to Europe. Bharatsphere Exim is a Murshidabad-based trading exporter
-              specialising in wine carriers, custom-printed promotional bags, and JC-blend lifestyle
-              lines.
+              Direct from India to Global Markets, BharatSphere Exim is an Indian origin,  Murshidabad-based exporter specialising in custom-printed jute bags, wine carriers and value-added sustainable packaging.
             </p>
             <div className="flex flex-wrap items-center gap-3 sm:gap-4 pt-2">
               <Link
@@ -127,9 +121,7 @@ export default function Home() {
             >
               <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-8 md:mb-12">
                 <div className="max-w-2xl">
-                  <div className="eyebrow text-[#C98E4B] mb-3">
-                    {isLead ? "Flagship Line · 01" : idx === 1 ? "02" : "03"}
-                  </div>
+                  
                   <h2 className={`font-serif-display text-[#1A3626] leading-[1.02] tracking-tight ${
                     isLead ? "text-4xl sm:text-5xl md:text-6xl" : "text-3xl sm:text-4xl md:text-5xl"
                   }`}>
