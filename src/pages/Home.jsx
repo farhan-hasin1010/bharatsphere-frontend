@@ -93,7 +93,7 @@ export default function Home() {
 
       {/* CREDENTIALS BADGE ROW */}
       <section className="px-6 md:px-12 lg:px-20 py-12 md:py-16 border-b border-[#D5D0C5]" data-testid="credentials-section">
-        <div className="eyebrow mb-5 text-center md:text-left">Why Bharatsphere</div>
+        <div className="eyebrow mb-5 text-center md:text-left">CERTIFICATIONS & STANDARDS</div>
         <ul className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4" data-testid="credentials-badges">
           {CREDENTIALS.map((c) => (
             <li
